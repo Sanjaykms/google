@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="icon.png" rel="icon" sizes="any">
+    <link href="style.css" rel="stylesheet">
+    <title>Google</title>
+</head>
+<body>
+    <div class="container">
+        <div class="first">
+            <a href="https://mail.google.com/mail/&ogbl" class="first1">Gmail</a>
+            <a href="https://www.google.co.in/imghp?hl=en&ogbl" class="first1">Images</a>
+            <a href="https://www.google.co.in/intl/en/about/products" class="first2"><img src="dots.svg"></a>
+            <button type="button">Sign in</button>
+        </div>
+        <form class="second" onsubmit="return false;">
+            <img src="google.png" class="goo">
+            <div class="in" title="Search">
+                <img src="search.png" class="search">
+                <input type="text" id="search" autofocus>
+                <div class="voice">
+                    <img src="voice.png">
+                    <span>Search by voice</span>
+                </div>
+            </div>
+            <div class="butt">
+                <input type="submit" value="Google Search" onclick="myfun()" class="butte">
+                <a href="https://www.google.com/doodles" class="butte">I'm Feeling Lucky</a>
+            </div>
+            <div class="lang">
+                <h3>Google offered in:</h3>
+                <a href="">हिंदी</a>
+                <a href="">বাঙালি</a>
+                <a href="">বাঙালি</a>
+                <a href="">తెలుగు</a>
+                <a href="">বাঙালি</a>
+                <a href="">தமிழ்</a>
+                <a href="">বাঙালি</a>
+                <a href="">മലയാളം</a>
+                <a href="">ਪੰਜਾਬੀ</a>
+            </div>
+        </form>
+        <div class="third">
+            <div class="india">
+                <p>India</p>
+            </div>
+            <div class="about">
+                <div class="one">
+                    <a href="https://about.google/?utm_source=google-IN&utm_medium=referral&utm_campaign=hp-footer&fg=1">About</a>
+                    <a href="https://www.google.co.in/intl/en_in/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1">Advertising</a>
+                    <a href="https://www.google.co.in/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1">Business</a>
+                    <a href="https://google.com/search/howsearchworks/?fg=1">How Search works</a>
+                </div>
+                <div class="one">
+                    <a href="https://policies.google.com/privacy?hl=en-IN&fg=1">Privacy</a>
+                    <a href="https://policies.google.com/terms?hl=en-IN&fg=1">Terms</a>
+                    <div class="setting">
+                        <a class="set" id="link">Settings</a>
+                        <div class="setin none">
+                            <a href="https://www.google.co.in/preferences?hl=en-IN&fg=1">Search settings</a>
+                            <a href="https://www.google.co.in/advanced_search?hl=en-IN&fg=1">Advanced search</a>
+                            <a href="https://www.google.co.in/history/privacyadvisor/search/unauth?utm_source=googlemenu&fg=1">Your data in Search</a>
+                            <a href="https://www.google.co.in/history/optout?hl=en-IN&fg=1">Search history</a>
+                            <a href="https://support.google.com/websearch/?p=ws_results_help&hl=en-IN&fg=1">Search help</a>
+                            <a href="#">Send feedback</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+          function myfun(){
+            let s="https://www.google.com/search?q="+document.getElementById("search").value;
+            window.open(s,"_top");
+            }
+            var s=document.getElementsByClassName("setin")[0];
+            document.documentElement.addEventListener("click",function(event){
+                if(event.target.id=="link"){
+                    if(s.classList.contains("none")){
+                        s.classList.remove("none");
+                    }
+                    else{
+                        s.classList.add("none");
+                    }
+                }
+                else{
+                        s.classList.add("none");
+                    }
+            });
+    </script>
+</body>
+</html>
